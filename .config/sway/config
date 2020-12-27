@@ -1,0 +1,191 @@
+#
+# Input configuration
+#
+
+# Bind using id instead of type because my Lenovo has a lot of inputs
+# of type keyboard
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout us,ru
+    xkb_variant colemak,
+    # - Both shifts switch the layout
+    # - Make Caps Lock an additional Esc, but Shift + Caps Lock is the regular Caps Lock
+    # - Win is mapped to PrtSc and the usual Win
+    xkb_options grp:shifts_toggle,caps:escape_shifted_capslock,altwin:prtsc_rwin
+}
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    tap enabled
+    natural_scroll enabled
+    pointer_accel 0.6
+    accel_profile adaptive
+}
+
+
+#
+# Variables
+#
+
+# basic keys
+set $mod Mod4
+set $left l
+set $right j
+set $up h
+set $down k
+
+# for navagating when RU layout is active
+set $left_ru Cyrillic_en
+set $right_ru Cyrillic_ghe
+set $up_ru Cyrillic_er
+set $down_ru Cyrillic_te
+
+
+#
+# Key bindings
+#
+
+# Start a terminal
+bindsym $mod+Return exec alacritty
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+floating_modifier $mod normal
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Exit sway
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+
+#
+# Moving around:
+#
+
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$right focus right
+bindsym $mod+$up focus up
+bindsym $mod+$down focus down
+bindsym $mod+$left_ru focus left
+bindsym $mod+$right_ru focus right
+bindsym $mod+$up_ru focus up
+bindsym $mod+$down_ru focus down
+
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$left_ru move left
+bindsym $mod+Shift+$right_ru move right
+bindsym $mod+Shift+$up_ru move up
+bindsym $mod+Shift+$down_ru move down
+
+
+#
+# Workspaces:
+#
+
+# Switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+
+#
+# Layout stuff:
+#
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+bindsym $mod+Cyrillic_i splith
+bindsym $mod+Cyrillic_em splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Cyrillic_ve layout stacking
+bindsym $mod+Cyrillic_tse layout tabbed
+bindsym $mod+Cyrillic_el layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+bindsym $mod+Cyrillic_u fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
+bindsym $mod+Cyrillic_ef focus parent
+
+
+#
+# Resizing containers:
+#
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $right resize grow width 10px
+    bindsym $up resize shrink height 10px
+    bindsym $down resize grow height 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Right resize grow width 10px
+    bindsym Up resize shrink height 10px
+    bindsym Down resize grow height 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+#
+# Misc stuff
+#
+
+# Wallpaper
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# Idle configuration. Turnoff screen after 600s. Lock screen before going to sleep.
+exec swayidle -w timeout 600 'swaymsg "output * dpms off"' \
+			     resume 'swaymsg "output * dpms on"' \
+	         before-sleep 'swaylock -f -c 000000'
+
+# keyboard layout per window
+exec swaykbdd
+
+bar {
+    # I prefer i3status but it does not support showing layout in sway
+    swaybar_command waybar
+}
+
+include /etc/sway/config.d/*
