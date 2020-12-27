@@ -1,0 +1,33 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = true
+[alias]
+    l = log --format=oneline --graph
+    s = status
+    d = diff
+    ds = diff --staged
+    dc = diff --check
+    dsc = diff --staged --check
+    b = branch
+[pack]
+    packSizeLimit = 2g
+[diff "astextplain"]
+    textconv = astextplain
+[rebase]
+    autosquash = true
+[user]
+    name = Nick Shyrokovskiy
+    email = nshyrokovskiy@gmail.com
+[diff]
+    tool = vimdiff
+[merge]
+    tool = vimdiff
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = vim
+[push]
+    default = tracking
+[advice]
+    addIgnoredFile = false
