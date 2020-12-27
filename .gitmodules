@@ -15,4 +15,4 @@
 	url = https://github.com/easymotion/vim-easymotion
 [submodule ".vim/bundle/vim-repeat"]
 	path = .vim/bundle/vim-repeat
-	url = https://github.com/easymotion/tpope/vim-repeat
+	url = https://github.com/tpope/vim-repeat
