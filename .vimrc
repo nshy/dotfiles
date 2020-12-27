@@ -1,13 +1,4 @@
-call plug#begin('~/.vim/plugged')
-
-Plug 'jlanzarotta/bufexplorer'
-Plug 'tpope/vim-commentary'
-Plug 'preservim/nerdtree'
-Plug 'ervandew/supertab'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-repeat'
-
-call plug#end()
+execute pathogen#infect()
 
 set nocompatible
 set ttimeoutlen=10
