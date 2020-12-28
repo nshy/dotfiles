@@ -71,6 +71,7 @@ let mapleader=","
 
 nmap <leader>/ :setlocal hlsearch!<CR>
 nmap <leader>l :setlocal list!<CR>
+nmap <leader>p :setlocal paste!<CR>
 
 " r for recent
 nnoremap <leader>r :BufExplorer<CR>
