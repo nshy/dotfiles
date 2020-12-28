@@ -8,6 +8,9 @@ set listchars=tab:>\-,nbsp:.,extends:#,trail:\!
 set nowrap
 let &showbreak="> "
 set ignorecase
+" This is off by default in current Arch and in Centos7 according to docs
+" but unexpectedly it is actually on on Centos7. Let's set it to no explicitly.
+set nohlsearch
 " supertab is currently does not work with smartcase
 " set smartcase
 set ruler
