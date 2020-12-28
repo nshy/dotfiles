@@ -18,4 +18,4 @@
 	url = https://github.com/tpope/vim-repeat
 [submodule ".vim/bundle/wombat256"]
 	path = .vim/bundle/wombat256
-	url = git@github.com:nshy/wombat256.git
+	url = https://github.com/nshy/wombat256.git
