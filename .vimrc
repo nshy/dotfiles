@@ -70,8 +70,8 @@ vnoremap <tab> %
 let mapleader=","
 
 nmap <leader>/ :setlocal hlsearch!<CR>
-nmap <leader>l :setlocal list!<CR>
-nmap <leader>p :setlocal paste!<CR>
+nmap <leader>l :setlocal list! list?<CR>
+nmap <leader>p :setlocal paste! paste?<CR>
 
 " r for recent
 nnoremap <leader>r :BufExplorer<CR>
