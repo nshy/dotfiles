@@ -119,3 +119,7 @@ if exists('+colorcolumn')
     autocmd FileType help,bufexplorer,nerdtree setlocal colorcolumn=0
   augroup END
 endif
+
+if filereadable(".lvimrc")
+  so .lvimrc
+endif
