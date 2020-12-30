@@ -40,6 +40,7 @@
 #cpu,
 #memory,
 #tray,
+#idle_inhibitor,
 #language {
     padding: 0 10px;
 }
@@ -69,4 +70,9 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#idle_inhibitor.activated {
+    background-color: #1ebd48;
+    color: #000000;
 }

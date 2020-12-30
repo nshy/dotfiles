@@ -6,7 +6,8 @@
 
     "modules-left": ["sway/workspaces"],
 
-    "modules-right": ["sway/language", "battery", "cpu", "memory", "clock", "tray"],
+    "modules-right": ["sway/language", "battery", "cpu", "memory", "clock",
+                      "idle_inhibitor", "tray"],
     "battery": {
         "states": {
             "warning": 30,
@@ -31,5 +32,9 @@
     },
     "tray": {
         "spacing": 0
+    },
+    "idle_inhibitor" : {
+        "format": "SCR",
+        "tooltip": false
     }
 }
