@@ -21,7 +21,7 @@ set diffopt=filler,vertical
 " centos7 version does not support closeoff
 silent! set diffopt+=closeoff
 set imsearch=-1
-set keymap=russian-colemak
+set keymap=russian-colemakwin
 set iminsert=0
 set encoding=utf-8
 set fileformat=unix
