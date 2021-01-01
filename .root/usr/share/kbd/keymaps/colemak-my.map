@@ -1,3 +1,5 @@
+# vim: set et:
+
 # colemak.kmap for Linux console.
 # 2006-01-01 Shai Coleman, http://colemak.com/ . Public domain.
 alt_is_meta
