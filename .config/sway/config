@@ -20,6 +20,8 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     natural_scroll enabled
     pointer_accel 0.6
     accel_profile adaptive
+    dwt enabled
+    events disabled_on_external_mouse
 }
 
 
