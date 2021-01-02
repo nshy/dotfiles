@@ -111,13 +111,6 @@ let NERDTreeShowHidden=1
 " bufexplorer
 let g:bufExplorerShowRelativePath=1
 
-" easyclip
-"
-" disabled because it doesn't work in vim8 and I don't want to have
-" an option working on my desktop and not working on Vz servers
-let g:EasyClipUsePasteToggleDefaults=0
-let g:EasyClipYankHistorySize=10
-
 " more enhanced tunings
 " =====================
 
