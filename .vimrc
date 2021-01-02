@@ -33,6 +33,7 @@ set wildignorecase
 set hidden
 set gdefault
 set formatoptions=qr1
+set showcmd
 
 syntax on
 filetype plugin indent on
