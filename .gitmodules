@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vim-russian-colemak"]
 	path = .vim/bundle/vim-russian-colemak
 	url = https://github.com/nshy/vim-russian-colemakwin.git
+[submodule ".vim/bundle/vim-easyclip"]
+	path = .vim/bundle/vim-easyclip
+	url = https://github.com/svermeulen/vim-easyclip.git
