@@ -87,11 +87,6 @@ nnoremap <leader>r :BufExplorer<CR>
 " o for open
 nnoremap <leader>o :NERDTreeToggle<CR>
 
-" handy cscope mappings
-nnoremap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
-
 " slower leader mappings
 " ======================
 
