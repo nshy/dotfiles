@@ -56,6 +56,12 @@ nmap <C-l> <C-W><Right>
 nmap <C-h> <C-W><Up>
 nmap <C-k> <C-W><Down>
 
+" colemak motions when moving windows
+nnoremap <C-W>J <C-W>H
+nnoremap <C-W>L <C-W>L
+nnoremap <C-W>H <C-W>K
+nnoremap <C-W>K <C-W>J
+
 " some mappings that more useful then defaults
 
 " find match of brakets etc with Tab
