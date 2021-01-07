@@ -22,7 +22,7 @@
 [rebase]
     autosquash = true
 [user]
-    name = Nick Shyrokovskiy
+    name = Nikolay Shirokovskiy
     email = nshyrokovskiy@gmail.com
 [diff]
     tool = vimdiff
