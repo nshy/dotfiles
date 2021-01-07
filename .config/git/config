@@ -34,5 +34,8 @@
     default = tracking
 [advice]
     addIgnoredFile = false
+
+# keep this at the very bottom so that the local config
+# can overwrite all the above settings
 [include]
     path = ~/.config/git/local
