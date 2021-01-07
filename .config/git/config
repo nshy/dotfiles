@@ -27,7 +27,7 @@
 [merge]
     tool = vimdiff
 [core]
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.config/git/ignore
     editor = vim
     pager = less -R
 [push]
