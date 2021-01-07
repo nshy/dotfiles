@@ -5,7 +5,6 @@ execute pathogen#infect()
 set nocompatible
 set ttimeoutlen=10
 set noerrorbells
-set title
 set listchars=tab:>\-,nbsp:.,extends:#,trail:\!
 set nowrap
 let &showbreak="> "
