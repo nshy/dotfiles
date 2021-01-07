@@ -1,5 +1,7 @@
 # vim: set ts=4 sts=4 sw=4 et:
 
+[include]
+    path = ~/.config/git/local
 [color]
     diff = auto
     status = auto
