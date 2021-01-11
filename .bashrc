@@ -4,7 +4,6 @@ bash=${BASH_VERSION%.*}; bmajor=${bash%.*}; bminor=${bash#*.}
 
 # bash completion does not work on old versions with failglob set
 if [ $bmajor -gt 4 ] || [ $bmajor -eq 4 -a $bminor -gt 2 ]; then
-    shopt -s failglob
     PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 else
     # similar to above but don't escape ~ as older versions of bash
