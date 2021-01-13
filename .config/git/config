@@ -30,6 +30,9 @@
     excludesfile = ~/.config/git/ignore
     editor = vim
     pager = less -R
+[pager]
+    branch = less -RF
+    diff = less -RF
 [push]
     default = tracking
 [advice]
