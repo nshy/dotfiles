@@ -33,6 +33,7 @@
 [pager]
     branch = less -RF
     diff = less -RF
+    grep = less -RF
 [push]
     default = tracking
 [advice]
