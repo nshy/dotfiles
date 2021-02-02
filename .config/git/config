@@ -34,6 +34,7 @@
     branch = less -RF
     diff = less -RF
     grep = less -RF
+    log = less -RS
 [push]
     default = tracking
 [advice]
