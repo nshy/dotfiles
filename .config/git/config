@@ -32,8 +32,9 @@
     pager = less -R
 [pager]
     branch = less -RF
-    diff = less -RF
-    grep = less -RF
+    diff = less -RFS
+    show = less -RFS
+    grep = less -RFS
     log = less -RS
 [push]
     default = tracking
