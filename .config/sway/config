@@ -31,8 +31,8 @@ input "1739:0:Synaptics_TM3471-010" {
 
 # basic keys
 set $mod Mod4
-set $left l
-set $right j
+set $left j
+set $right l
 set $up h
 set $down k
 
