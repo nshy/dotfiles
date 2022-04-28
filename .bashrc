@@ -20,3 +20,5 @@ export LESS=-i
 PS1='[\u@\h \W]\$ '
 
 alias grep='grep -i'
+
+. .lbashrc
