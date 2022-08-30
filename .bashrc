@@ -22,4 +22,4 @@ PS1='[\u@\h \W]\$ '
 alias grep='grep -i --color=auto'
 alias ls='ls --color=auto'
 
-. .lbashrc
+[ -r .lbashrc ] && . .lbashrc
