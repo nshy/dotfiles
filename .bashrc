@@ -19,6 +19,7 @@ export LESS=-i
 
 PS1='[\u@\h \W]\$ '
 
-alias grep='grep -i'
+alias grep='grep -i --color=auto'
+alias ls='ls --color=auto'
 
 . .lbashrc
