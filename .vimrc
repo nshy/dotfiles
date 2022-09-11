@@ -85,6 +85,8 @@ nmap <leader>p :setlocal paste! paste?<CR>
 nnoremap <leader>r :BufExplorer<CR>
 " o for open
 nnoremap <leader>o :NERDTreeToggle<CR>
+" b for blame
+nnoremap <leader>b :Git blame<CR>
 
 " slower leader mappings
 " ======================
