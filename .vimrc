@@ -84,7 +84,7 @@ nmap <leader>p :setlocal paste! paste?<CR>
 " r for recent
 nnoremap <leader>r :BufExplorer<CR>
 " o for open
-nnoremap <leader>o :NERDTreeToggle<CR>
+nnoremap <leader>o :FZF<CR>
 " b for blame
 nnoremap <leader>b :Git blame<CR>
 
@@ -106,10 +106,6 @@ let g:EasyMotion_mapping_k='<leader>h'
 let g:SuperTabDefaultCompletionType="<c-n>"
 let g:SuperTabLongestEnhanced=1
 
-" nerdtree
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
-
 " bufexplorer
 let g:bufExplorerShowRelativePath=1
 
@@ -121,7 +117,7 @@ if exists('+colorcolumn')
   augroup color-column
     autocmd!
     autocmd FileType * setlocal colorcolumn=80
-    autocmd FileType help,bufexplorer,nerdtree setlocal colorcolumn=0
+    autocmd FileType help,bufexplorer setlocal colorcolumn=0
   augroup END
 endif
 
