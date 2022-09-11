@@ -179,10 +179,13 @@ bindsym $mod+r mode "resize"
 # Wallpaper
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
+set $swaylock swaylock -f --screenshots --effect-pixelate 5
 # Idle configuration. Turnoff screen after 600s. Lock screen before going to sleep.
 exec swayidle -w timeout 600 'swaymsg "output * dpms off"' \
                  resume 'swaymsg "output * dpms on"' \
-             before-sleep 'swaylock -f -c 000000'
+                 before-sleep '$swaylock'
+bindsym $mod+Shift+x exec $swaylock
+bindsym $mod+Shift+Cyrillic_che exec $swaylock
 
 # keyboard layout per window
 exec swaykbdd
