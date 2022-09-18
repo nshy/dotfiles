@@ -26,4 +26,14 @@ alias ls='ls --color=auto'
 [ -r /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
 [ -r /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 
+# fzf files on Ubuntu
+if [ -r /usr/share/doc/fzf/examples/key-bindings.bash ]
+then
+    . /usr/share/doc/fzf/examples/key-bindings.bash
+fi
+if [ -r /usr/share/doc/fzf/examples/completion.bash ]
+then
+    . /usr/share/doc/fzf/examples/completion.bash
+fi
+
 [ -r .lbashrc ] && . .lbashrc
