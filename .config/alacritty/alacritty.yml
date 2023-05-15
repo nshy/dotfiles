@@ -9,3 +9,7 @@ key_bindings:
   - { key: K, mode: Vi, action: Down }
   - { key: J, mode: Vi, action: Left }
   - { key: L, mode: Vi, action: Right }
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t-/@.+~=*;"
+  save_to_clipboard: true
