@@ -16,6 +16,7 @@ shopt -s histappend
 
 export EDITOR=vim
 export LESS=-i
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 
 PS1='[\u@\h \W]\$ '
 
