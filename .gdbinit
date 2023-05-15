@@ -1,4 +1,3 @@
-set history save
+set history save on
 set history filename ~/.gdb_history
-set history on
 set history expansion on
