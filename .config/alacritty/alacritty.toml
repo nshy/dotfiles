@@ -1,0 +1,33 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[[keyboard.bindings]]
+action = "Up"
+key = "H"
+mode = "Vi"
+
+[[keyboard.bindings]]
+action = "Down"
+key = "K"
+mode = "Vi"
+
+[[keyboard.bindings]]
+action = "Left"
+key = "J"
+mode = "Vi"
+
+[[keyboard.bindings]]
+action = "Right"
+key = "L"
+mode = "Vi"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`’‘|:\"' ()[]{}<>\t-/@.+~=*;"
