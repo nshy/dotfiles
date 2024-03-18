@@ -22,6 +22,7 @@ PS1='[\u@\h \W]\$ '
 
 alias grep='grep -i --color=auto'
 alias ls='ls --color=auto'
+alias less='less -R'
 
 # fzf files on Arch
 [ -r /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
