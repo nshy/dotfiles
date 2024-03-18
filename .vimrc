@@ -87,6 +87,8 @@ nnoremap <leader>r :BufExplorer<CR>
 nnoremap <leader>o :FZF<CR>
 " b for blame
 nnoremap <leader>b :Git blame<CR>
+" s for search
+nnoremap <leader>s :grep -RI <C-R><C-W><space>
 
 " slower leader mappings
 " ======================
